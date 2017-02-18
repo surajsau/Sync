@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/surajkumarsau/Downloads/frnds/app-intro/src/main/assets"/><source path="/Users/surajkumarsau/Downloads/frnds/app-intro/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/Users/surajkumarsau/Downloads/frnds/app-intro/src/debug/assets"/></dataSet></merger>
