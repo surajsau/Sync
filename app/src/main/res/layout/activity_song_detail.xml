@@ -1,0 +1,320 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.halfplatepoha.frnds.ui.GlideImageView
+        android:id="@+id/ivAlbumBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/warriors" />
+
+    <io.codetail.widget.RevealFrameLayout
+        android:id="@+id/detailsGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?android:actionBarSize"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="?android:actionBarSize"
+                android:background="@color/colorPrimary">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical">
+
+                    <ImageButton
+                        android:id="@+id/back"
+                        android:layout_width="?android:actionBarSize"
+                        android:layout_height="?android:actionBarSize"
+                        android:background="@null"
+                        android:src="@drawable/arrow_back_icon" />
+
+                    <View
+                        android:id="@+id/pendingChat"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/pending_messages_background"
+                        android:padding="3dp"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginLeft="?android:actionBarSize"
+                    android:layout_marginRight="?android:actionBarSize"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivFrndAvatar"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/pappi"
+                        android:transitionName="@string/frnd_avatar_transition"
+                        tools:src="@drawable/warriors" />
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:orientation="vertical">-->
+
+                    <com.halfplatepoha.frnds.ui.OpenSansTextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Swapnil Gupta"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="18sp"
+                        android:transitionName="@string/frnd_name_transition"
+                        tools:text="Swapnil Gupta" />
+
+                    <!--<com.halfplatepoha.frnds.ui.OpenSansTextView-->
+                    <!--android:id="@+id/tvStatus"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:ellipsize="end"-->
+                    <!--tools:text="Listening to Ae Dil hai Mushkil"-->
+                    <!--android:text="Listening to Ae Dil hai Mushkil"-->
+                    <!--android:textColor="@color/textPrimary"-->
+                    <!--android:textSize="13sp" />-->
+
+                    <!--</LinearLayout>-->
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="?android:actionBarSize"
+                    android:layout_height="?android:actionBarSize"
+                    android:layout_gravity="end|center_vertical">
+
+                    <ImageButton
+                        android:id="@+id/btnPlaylist"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:src="@drawable/cd_player_icon" />
+
+                    <ImageView
+                        android:id="@+id/ivSongPlayingIndicator"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/song_playing_indicator"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+                </FrameLayout>
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@drawable/color1" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorChatBackground">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rlChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    tools:listitem="@layout/row_chat_me" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/playlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?android:actionBarSize"
+            android:background="@color/colorPrimaryLight"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rlAlbums"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/playlist_zero_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.halfplatepoha.frnds.ui.OpenSansTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|end|top"
+                            android:text="+"
+                            android:textColor="@color/colorPrimary_a0"
+                            android:textSize="30sp" />
+
+                        <ImageView
+                            android:layout_margin="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/cd_player_big" />
+                    </FrameLayout>
+
+                    <com.halfplatepoha.frnds.ui.OpenSansTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Song to start Sycing with %s"
+                        android:textColor="@color/colorPrimary_a0" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <com.halfplatepoha.frnds.ui.OpenSansTextView
+                android:id="@+id/tvTrackTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:textColor="@color/textPrimaryDark"
+                android:textSize="15sp"
+                tools:text="Warriors Sample text here" />
+
+            <com.halfplatepoha.frnds.ui.OpenSansTextView
+                android:id="@+id/tvTrackArtist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:textColor="@color/textSecondary"
+                android:textSize="13sp"
+                tools:text="Imagine Dragons" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Controller-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Buttons for favourite and
+                    listen with someone and
+                    move to other tab_chat -->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </io.codetail.widget.RevealFrameLayout>
+
+    <FrameLayout
+        android:id="@+id/chatMessageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnMusic"
+            android:layout_width="?android:actionBarSize"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@drawable/color1"
+            android:scaleType="center"
+            android:src="@drawable/music_play_icon" />
+
+        <ImageButton
+            android:id="@+id/btnSend"
+            android:layout_width="?android:actionBarSize"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@color/colorBtnSend"
+            android:scaleType="center"
+            android:src="@drawable/send_icon" />
+
+        <FrameLayout
+            android:id="@+id/messageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginLeft="?android:actionBarSize"
+            android:background="@color/colorPrimary">
+
+            <com.halfplatepoha.frnds.ui.OpenSansEditText
+                android:id="@+id/etMessage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:background="@null"
+                android:hint="Type a message"
+                android:textColor="@color/textPrimary"
+                android:textColorHint="@color/textSecondary"
+                android:textSize="13sp" />
+
+            <ImageButton
+                android:id="@+id/btnMessageBoxMusic"
+                android:layout_width="?android:actionBarSize"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:alpha="0.0"
+                android:background="@drawable/color4"
+                android:scaleType="center"
+                android:src="@drawable/music_play_icon"
+                android:visibility="gone" />
+        </FrameLayout>
+
+    </FrameLayout>
+</FrameLayout>

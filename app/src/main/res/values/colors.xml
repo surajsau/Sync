@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#343741</color>
+    <color name="colorPrimaryDark">#2d2f38</color>
+    <color name="colorPrimaryVeryDark">#1d1f26</color>
+    <color name="colorPrimaryLight">#ffffff</color>
+    <color name="colorPrimaryLight_b0">#b0ffffff</color>
+    <color name="colorPrimary_a0">#a0343741</color>
+    <color name="colorPrimary_b0">#b0343741</color>
+    <color name="colorAccent">#fa4a4d</color>
+
+    <color name="colorDivider_search">#ffc599</color>
+    <color name="colorDivider_chat">#f4a1b1</color>
+    <color name="colorDivider_tracks">#ffaa7f</color>
+
+    <color name="soundCloud">#ff7000</color>
+    <color name="recentTracks">#ffaa7f</color>
+
+    <color name="colorIcons">#160206</color>
+
+    <color name="textPrimary">#ffffff</color>
+    <color name="textPrimary_b0">#b0ffffff</color>
+    <color name="textSecondary">#a6a5a7</color>
+    <color name="textPrimaryDark">#160206</color>
+
+    <color name="textUnread">#ffffff</color>
+    <color name="textRead">#80ffffff</color>
+
+    <color name="colorChatBackground">#96000000</color>
+
+    <color name="colorFrndBubble">#4f5362</color>
+    <color name="colorMeBubble">#fa4a4d</color>
+    <color name="textMe">#ffffff</color>
+    <color name="textFrnd">#ffffff</color>
+
+    <color name="colorBtnSend">#fa4a4d</color>
+
+    <color name="dark_gray">#141414</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="chatMessageBackground">#22FFFFFF</color>
+
+    <color name="purple_500">#9C27B0</color>
+    <color name="deep_purple_500">#673AB7</color>
+    <color name="indigo_500">#3F51B5</color>
+    <color name="blue_500">#2196F3</color>
+    <color name="cyan_500">#00BCD4</color>
+    <color name="light_blue_500">#03A9F4</color>
+</resources>

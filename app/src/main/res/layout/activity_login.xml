@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".login.activity.LoginActivity">
+
+    <View android:background="@drawable/splash_animation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/animation"/>
+
+    <View android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:alpha="0.1"
+        android:layout_height="match_parent"/>
+    
+    <com.halfplatepoha.frnds.ui.OpenSansTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/app_name"
+        app:typeface="open_sans_bold"
+        android:layout_gravity="center"/>
+
+    <com.halfplatepoha.frnds.ui.OpenSansButton
+        android:id="@+id/btnFbLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:transitionName="@string/app_name_transition"
+        android:text="Continue with Facebook"
+        android:background="@color/com_facebook_blue"
+        android:layout_gravity="bottom"/>
+    
+    <!--<com.facebook.login.widget.LoginButton-->
+        <!--android:id="@+id/btnFbLogin"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_gravity="bottom|center_horizontal"-->
+        <!--android:layout_marginBottom="20dp"/>-->
+
+</FrameLayout>

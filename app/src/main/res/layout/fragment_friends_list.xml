@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.halfplatepoha.frnds.home.fragment.FriendsListFragment">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rlFrnds"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryVeryDark"
+            tools:listitem="@layout/row_frnds_list" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout android:id="@+id/zero_state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        tools:visbility="visible"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <com.halfplatepoha.frnds.ui.OpenSansTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sync with your friends"
+            android:textColor="@color/colorPrimaryLight_b0"
+            android:textSize="18sp" />
+
+        <com.halfplatepoha.frnds.ui.OpenSansButton
+            android:id="@+id/btnShareSync"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/color2"
+            android:drawableLeft="@drawable/whatsapp"
+            android:drawablePadding="10dp"
+            android:minHeight="0dp"
+            android:padding="10dp"
+            android:text="Spread the love"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</FrameLayout>

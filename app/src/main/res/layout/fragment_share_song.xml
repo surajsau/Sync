@@ -1,0 +1,122 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight_b0"
+    android:clickable="true"
+    tools:context="com.halfplatepoha.frnds.detail.fragment.ShareSongFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="?android:actionBarSize"
+                android:layout_height="?android:actionBarSize"
+                android:layout_gravity="start|center_vertical"
+                android:background="@null"
+                app:srcCompat="@drawable/close" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="?android:actionBarSize"
+                android:layout_marginRight="?android:actionBarSize"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.halfplatepoha.frnds.ui.OpenSansTextView
+                    android:id="@+id/tvAlbumTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Warriors"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="18sp"
+                    tools:text="Warriors" />
+
+                <com.halfplatepoha.frnds.ui.OpenSansTextView
+                    android:id="@+id/tvAlbumArtist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Imagin Dragons"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="13sp"
+                    tools:text="Imagine Dragons" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="15dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.halfplatepoha.frnds.ui.GlideImageView
+                    android:id="@+id/ivAlbum"
+                    android:layout_width="256dp"
+                    android:layout_height="256dp"
+                    android:src="@drawable/warriors"
+                    tools:src="@drawable/warriors" />
+
+                <View android:background="@color/colorPrimary"
+                    android:alpha="0.2"
+                    android:layout_width="256dp"
+                    android:layout_height="256dp"/>
+
+                <ImageButton app:srcCompat="@drawable/play_big"
+                    android:layout_width="256dp"
+                    android:background="@null"
+                    android:layout_height="256dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/btnPlaySong"/>
+            </FrameLayout>
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/btnShare"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:background="@color/colorPrimaryVeryDark"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/whatsapp" />
+
+            <com.halfplatepoha.frnds.ui.OpenSansTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/sync_on_whatsapp"
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

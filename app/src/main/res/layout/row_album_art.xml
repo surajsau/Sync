@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="0dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp">
+
+    <com.halfplatepoha.frnds.ui.GlideImageView
+        android:id="@+id/ivAlbum"
+        android:layout_width="196dp"
+        android:layout_height="196dp"
+        tools:src="@drawable/warriors"/>
+
+</android.support.v7.widget.CardView>

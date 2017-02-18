@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="72dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/rowFrndShareSuggestion"
+    android:gravity="center">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivFrndAvatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/pappi"
+        tools:src="@drawable/pappi"
+        android:layout_marginBottom="6dp"/>
+
+    <com.halfplatepoha.frnds.ui.OpenSansTextView
+        android:id="@+id/tvFrndName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        tools:text="Swapnil"
+        android:text="Swapnil"
+        android:maxLines="1"
+        android:gravity="center_horizontal"
+        android:textColor="@color/textPrimary"/>
+
+</LinearLayout>

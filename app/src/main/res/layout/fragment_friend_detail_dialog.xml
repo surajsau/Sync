@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".home.fragment.FriendDetailDialogFragment">
+
+    <ImageView android:id="@+id/ivFrndAvatar"
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:src="@drawable/warriors"
+        android:scaleType="centerCrop"
+        android:paddingBottom="72dp"/>
+
+    <com.halfplatepoha.frnds.ui.OpenSansTextView
+        android:id="@+id/tvFrndName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Swapnil Gupta"
+        android:textColor="@android:color/white"
+        android:layout_margin="10dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:textSize="16sp"
+        app:typeface="open_sans_regular" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/music_play_icon"
+        app:fabSize="mini"
+        android:layout_margin="16dp"
+        app:backgroundTint="@color/colorAccent"
+        app:elevation="15dp"/>
+
+</FrameLayout>

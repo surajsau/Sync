@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".search.activity.SearchScreenActivity"
+    android:background="@color/colorPrimary">
+
+    <FrameLayout
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <View android:id="@+id/darkToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:visibility="visible"/>
+
+        <View android:id="@+id/lightToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="?android:actionBarSize"
+            android:layout_height="?android:actionBarSize"
+            android:src="@drawable/arrow_back"
+            android:background="@null"
+            android:layout_gravity="start|center_vertical"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical">
+
+            <com.halfplatepoha.frnds.ui.OpenSansEditText
+                android:id="@+id/etSearch"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="?android:actionBarSize"
+                android:background="@null"
+                android:hint="Search your track"
+                android:cursorVisible="true"
+                android:focusableInTouchMode="true"
+                android:textColorHint="@color/textSecondary"
+                android:textColor="@color/textPrimary"/>
+
+            <ImageButton
+                android:id="@+id/cross"
+                android:layout_width="?android:actionBarSize"
+                android:layout_height="?android:actionBarSize"
+                app:srcCompat="@drawable/close"
+                android:background="@null"
+                android:layout_gravity="end"/>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorDivider_search"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:id="@+id/llPoweredBySoundcloud">
+
+            <com.halfplatepoha.frnds.ui.OpenSansTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="powered by"
+                android:textColor="@color/textPrimary"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/soundCloud"
+                android:src="@drawable/powered_by_soundcloud"
+                android:layout_marginLeft="5dp"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rlSearchResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/row_search_result"
+            android:layout_margin="10dp"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+</LinearLayout>

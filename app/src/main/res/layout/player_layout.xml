@@ -1,0 +1,77 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/player"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:alpha="0.4"
+        android:background="@drawable/color1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.halfplatepoha.frnds.ui.GlideImageView
+            android:id="@+id/ivPlayerAlbum"
+            android:layout_width="0dp"
+            android:layout_height="?android:actionBarSize"
+            android:layout_weight="1"
+            android:src="@drawable/warriors"
+            tools:src="@drawable/warriors" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="16dp">
+
+            <com.halfplatepoha.frnds.ui.OpenSansTextView
+                android:id="@+id/tvPlayerTrackTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="We're the Champions!"
+                android:textColor="@color/textPrimary"
+                android:textSize="15sp"
+                tools:text="We're the Champions!" />
+
+            <com.halfplatepoha.frnds.ui.OpenSansTextView
+                android:id="@+id/tvPlayerTrackFrnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="with Amrit Kamal Lenka"
+                android:textColor="@color/textPrimary_b0"
+                android:textSize="13sp"
+                tools:text="with Amrit Kamal Lenka" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnPlayNext"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            app:srcCompat="@drawable/play" />
+
+        <!--<LinearLayout android:id="@+id/player"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:background="@color/colorPrimaryDark"-->
+        <!--app:behavior_hideable="false"-->
+        <!--app:behavior_peekHeight="10dp"-->
+        <!--app:layout_behavior="android.support.design.widget.BottomSheetBehavior"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--xmlns:tools="http://schemas.android.com/tools">-->
+    </LinearLayout>
+</FrameLayout>

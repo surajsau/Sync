@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "848984009339",
+    "firebase_url": "https://frnds-b52ab.firebaseio.com",
+    "project_id": "frnds-b52ab",
+    "storage_bucket": "frnds-b52ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:848984009339:android:3049517e02042255",
+        "android_client_info": {
+          "package_name": "com.halfplatepoha.frnds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "848984009339-20h4mknr40bc777iib2pgmbpero8e74h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.halfplatepoha.frnds",
+            "certificate_hash": "D4D541A5D8D8B2988D0298F1ED4B2429C2AAF281"
+          }
+        },
+        {
+          "client_id": "848984009339-4esvn0upfvcevp0n6glrbre98cavpvjb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVpHk-0IpZ92f_RDYsYd53PTtivOn_fvI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "848984009339-4esvn0upfvcevp0n6glrbre98cavpvjb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

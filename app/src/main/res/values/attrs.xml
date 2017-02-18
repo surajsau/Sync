@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="open_sans_text_style">
+        <attr name="typeface"/>
+    </declare-styleable>
+
+    <attr name="typeface" format="enum">
+        <enum name="open_sans_regular" value="1" />
+        <enum name="open_sans_bold" value="2" />
+    </attr>
+</resources>

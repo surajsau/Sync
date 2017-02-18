@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="3dp"
+    android:layout_marginTop="3dp"
+    android:orientation="horizontal"
+    android:weightSum="11">
+
+    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+    <!--android:id="@+id/ivFrndAvatar"-->
+    <!--android:layout_width="24dp"-->
+    <!--android:layout_height="24dp"-->
+    <!--android:src="@drawable/pappi" />-->
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_weight="8"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/frnd_bubble"
+            android:paddingBottom="2dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="2dp">
+
+            <ImageButton
+                android:id="@+id/btnPlayPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/play_icon"
+                android:background="@null"/>
+
+            <com.halfplatepoha.frnds.ui.OpenSansTextView
+                android:id="@+id/tvFrndMsg"
+                style="@style/styleFrndChatMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                tools:text="yo kya kar rha hai ?" />
+
+        </LinearLayout>
+
+        <!--<com.halfplatepoha.frnds.ui.OpenSansTextView-->
+        <!--android:id="@+id/tvFrndTimeStamp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="start"-->
+        <!--android:layout_marginTop="3dp"-->
+        <!--android:text="10:00 am"-->
+        <!--android:textColor="#b9b8b8"-->
+        <!--android:textSize="12sp" />-->
+
+    </LinearLayout>
+
+</LinearLayout>
