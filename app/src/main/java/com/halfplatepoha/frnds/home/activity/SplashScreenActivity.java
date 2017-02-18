@@ -69,8 +69,6 @@ public class SplashScreenActivity extends AppCompatActivity implements ChatDAO.O
 
     private ChatDAO helper;
 
-    @Bind(R.id.appName) OpenSansTextView appName;
-
     @Bind(R.id.animation)
     View animation;
 

@@ -1,8 +1,10 @@
 package com.halfplatepoha.frnds.home.activity;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.facebook.AccessToken;
@@ -16,6 +18,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.firebase.auth.FirebaseAuth;
 import com.halfplatepoha.frnds.FrndsLog;
+import com.halfplatepoha.frnds.IConstants;
 import com.halfplatepoha.frnds.R;
 import com.halfplatepoha.frnds.TokenTracker;
 import com.halfplatepoha.frnds.db.IDbConstants;
@@ -102,6 +105,20 @@ public class ProfileAndSettingsActivity extends AppCompatActivity {
     public void logout() {
         LoginManager.getInstance().logOut();
         FirebaseAuth.getInstance().signOut();
+    }
+
+    @OnClick(R.id.btnShareSync)
+    public void onShareSync() {
+        String message = "Hi! Let\'s Sync what we listen to daily. Let\'s spread love. Download Sync from Playstore" + IConstants.APP_URL;
+        Intent whatsappIntent = new Intent(Intent.ACTION_SEND);
+        whatsappIntent.setType("text/plain");
+        whatsappIntent.setPackage("com.whatsapp");
+        whatsappIntent.putExtra(Intent.EXTRA_TEXT, message);
+        try {
+            startActivity(whatsappIntent);
+        } catch (ActivityNotFoundException ex) {
+            Toast.makeText(this, "WhatsApp isn\'t installed", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @OnClick(R.id.back)

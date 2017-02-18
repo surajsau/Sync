@@ -70,14 +70,22 @@
         android:textAllCaps="false"
         android:textSize="15sp"/>
 
-    <com.halfplatepoha.frnds.ui.OpenSansButton
-        android:id="@+id/btnAppIntro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <!--<com.halfplatepoha.frnds.ui.OpenSansButton-->
+        <!--android:id="@+id/btnAppIntro"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@null"-->
+        <!--android:text="App Intro"-->
+        <!--android:textAllCaps="false"-->
+        <!--android:textSize="15sp"/>-->
+
+    <ImageButton android:id="@+id/btnShareSync"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:srcCompat="@drawable/whatsapp"
         android:background="@null"
-        android:text="App Intro"
-        android:textAllCaps="false"
-        android:textSize="15sp"/>
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"/>
 
     <com.halfplatepoha.frnds.ui.OpenSansTextView
         android:layout_width="wrap_content"

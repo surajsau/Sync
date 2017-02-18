@@ -91,17 +91,6 @@ public class HomeActivity extends AppCompatActivity {
                 .commit();
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onStop();
-        try {
-            unregisterReceiver(notificationReceiver);
-            unregisterReceiver(songStatusReceiver);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     //    private void setupPager() {
 //        mTabAdapter = new TabPagerAdapter(this, getSupportFragmentManager());
 //        pager.setAdapter(mTabAdapter);
@@ -132,6 +121,10 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
+        registerReceiver(notificationReceiver, new IntentFilter(IConstants.CHAT_BROADCAST));
+        registerReceiver(songStatusReceiver, new IntentFilter(IConstants.SONG_STATUS_BROADCAST));
+
         updatePlayer();
     }
 
@@ -160,6 +153,12 @@ public class HomeActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         FrndsPreference.setInPref(IPrefConstants.SCREEN_TYPE, IConstants.SCREEN_NONE);
+        try {
+            unregisterReceiver(notificationReceiver);
+            unregisterReceiver(songStatusReceiver);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private BroadcastReceiver notificationReceiver = new BroadcastReceiver() {
