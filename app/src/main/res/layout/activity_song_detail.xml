@@ -203,9 +203,11 @@
                     </FrameLayout>
 
                     <com.halfplatepoha.frnds.ui.OpenSansTextView
+                        android:id="@+id/tvAlbumHelpText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Add Song to start Sycing with %s"
+                        tools:text="Sample"
+                        android:gravity="center_horizontal"
                         android:textColor="@color/colorPrimary_a0" />
                 </LinearLayout>
             </FrameLayout>

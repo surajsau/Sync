@@ -104,6 +104,8 @@ public class SongDetailActivity extends AppCompatActivity implements
 
     @Bind(R.id.playlist_zero_state) View playlistZero;
 
+    @Bind(R.id.tvAlbumHelpText) OpenSansTextView tvAlbumHelpText;
+
     private int[] btnPlaylistCoordinates;
 
     private String mFrndId;
@@ -283,6 +285,7 @@ public class SongDetailActivity extends AppCompatActivity implements
                     ivAlbumBg.setImageUrl(this, songs.last().getSongImgUrl());
                 } else {
                     playlistZero.setVisibility(View.VISIBLE);
+                    tvAlbumHelpText.setText(String.format("Add Songs to start Syncing with %s", mFrndName));
                     tvTrackArtist.setVisibility(View.GONE);
                     tvTrackTitle.setVisibility(View.GONE);
                 }
