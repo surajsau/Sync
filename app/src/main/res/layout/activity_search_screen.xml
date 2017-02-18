@@ -29,7 +29,7 @@
             android:id="@+id/back"
             android:layout_width="?android:actionBarSize"
             android:layout_height="?android:actionBarSize"
-            android:src="@drawable/arrow_back"
+            app:srcCompat="@drawable/arrow_back"
             android:background="@null"
             android:layout_gravity="start|center_vertical"/>
 

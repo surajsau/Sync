@@ -86,7 +86,7 @@ dependencies {
     compile('com.crashlytics.sdk.android:crashlytics:2.6.6@aar') {
         transitive = true;
     }
-    compile 'com.github.paolorotolo:appintro:4.1.0'
+    compile project(path: ':app-intro')
 }
 
 

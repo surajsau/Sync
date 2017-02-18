@@ -4,6 +4,7 @@ package com.halfplatepoha.frnds;
  * Created by surajkumarsau on 27/08/16.
  */
 public interface IPrefConstants {
+    String IS_FIRST_LAUNCH = "is_first_launch";
     String FCM_REFRESH_TOKEN = "fcm_refresh_token";
     String USER_NAME = "user_name";
     String FB_USER_ID = "fb_user_id";

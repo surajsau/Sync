@@ -33,6 +33,8 @@ import com.halfplatepoha.frnds.db.models.Song;
 import com.halfplatepoha.frnds.detail.IDetailsConstants;
 import com.halfplatepoha.frnds.detail.activity.SongDetailActivity;
 import com.halfplatepoha.frnds.fcm.IFCMConstants;
+import com.halfplatepoha.frnds.login.activity.IntroActivity;
+import com.halfplatepoha.frnds.login.activity.IntroConstants;
 import com.halfplatepoha.frnds.login.activity.LoginActivity;
 import com.halfplatepoha.frnds.models.fb.InstalledFrnds;
 import com.halfplatepoha.frnds.models.request.GetPendingRequest;
@@ -118,8 +120,20 @@ public class SplashScreenActivity extends AppCompatActivity implements ChatDAO.O
                     .setClientClass(SoundCloudClient.class)
                     .buildClient();
         } else {
-            startLoginActivity();
+//            if(FrndsPreference.getBooleanFromPref(IPrefConstants.IS_FIRST_LAUNCH, true)) {
+//                FrndsPreference.setInPref(IPrefConstants.IS_FIRST_LAUNCH, false);
+//                startIntroActivity();
+//            } else {
+                startLoginActivity();
+//            }
         }
+    }
+
+    private void startIntroActivity() {
+        Intent splashIntent = new Intent(this, IntroActivity.class);
+        splashIntent.putExtra(IntroConstants.INTRO_SOURCE, IntroConstants.SOURCE_SPLASH);
+        startActivity(splashIntent);
+        finish();
     }
 
     private void startLoginActivity() {

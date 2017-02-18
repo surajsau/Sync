@@ -22,6 +22,8 @@
         <activity android:name=".search.activity.SearchScreenActivity"
             android:parentActivityName=".detail.activity.SongDetailActivity"/>
 
+        <activity android:name=".login.activity.IntroActivity"/>
+
         <activity android:name=".detail.activity.SongDetailActivity"
             android:parentActivityName=".home.activity.HomeActivity"
             android:exported="true">
@@ -62,7 +64,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".home.activity.ProfileAndSettingsActivity" />
-        <activity android:name=".login.activity.IntroActivity"/>
     </application>
 
 </manifest>
